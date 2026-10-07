@@ -1,17 +1,23 @@
-# align_demo
+# Align Widget Demo
 
-A new Flutter project.
+`Align` is a Flutter widget that positions its child within itself using an `alignment` value, and can optionally size itself relative to the child.
 
-## Getting Started
+## Demo
+A small chat screen: `Align` places received messages on the left and sent messages on the right. A playground below the chat uses two sliders to show how `widthFactor` and `heightFactor` resize the `Align` (the amber box).
 
-This project is a starting point for a Flutter application.
+## Run
+```bash
+flutter pub get
+flutter run -d chrome
+```
 
-A few resources to get you started if this is your first Flutter project:
+## Three attributes
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- **`alignment`**: sets where the child sits inside the Align. In the demo, `Alignment.centerLeft` puts received messages on the left and `Alignment.centerRight` puts sent messages on the right.
+- **`widthFactor`**: sets the Align's width to the child's width multiplied by the factor. Dragging the slider from 1.0 to 3.0 makes the amber box grow wider around the "Typing..." box.
+- **`heightFactor`**: sets the Align's height to the child's height multiplied by the factor. Dragging the slider makes the amber box grow taller.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Note: if `widthFactor` and `heightFactor` are not set, `Align` expands to fill the space its parent gives it.
+
+## Screenshot
+![alt text](image.png)
